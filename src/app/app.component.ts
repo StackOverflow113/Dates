@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Citas';
+  listDate: any[] = [];
+
+  addDate(date: any) {
+    this.listDate.push(date);
+    console.log(this.addDate);
+  }
+
+  eliminarCitaListado(index: number) {
+    this.listDate.splice(index, 1);
+  }
 }
